@@ -11,38 +11,31 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="UI\Units\LogoButton.cs" />
-    <Compile Include="UI\Units\MenuButton.cs" />
-    <Compile Include="UI\Units\RiotSwitchButton.cs" />
+    <UpToDateCheckInput Remove="Themes\Generic.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Local\ViewModels\ArticleContentViewModel.cs" />
+    <Compile Include="UI\Views\ArticleContent.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Units\LogoButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Units\MenuButton.xaml">
+    <Page Include="Themes\Views\ArticleContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Units\RiotSwitchButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Themes\Units\MenuButton.xaml" />
+    <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Themes\Units\LogoButton.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Local\Images\favicon.png" />
+    <UpToDateCheckInput Remove="Themes\Views\ArticleContent.xaml" />
   </ItemGroup>
 
 </Project>

@@ -5,9 +5,5 @@
       xmlns:based="clr-namespace:Jamesnet.OpenSilver;assembly=Jamesnet.OpenSilver"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
-
-    <StackPanel Background="White">
-        <TextBlock Text="Hello, World!" FontSize="23" Margin="32,32,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <based:OpenSilverLayer LayerName="MAIN"/>
-    </StackPanel>
 </Page>

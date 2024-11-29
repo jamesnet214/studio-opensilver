@@ -28,6 +28,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
     <ProjectReference Include="..\Jamesnet.OpenSilver\Jamesnet.OpenSilver.csproj" />
+    <ProjectReference Include="..\Studio.Article\Studio.Article.csproj" />
+    <ProjectReference Include="..\Studio.Book\Studio.Book.csproj" />
     <ProjectReference Include="..\Studio.Main\Studio.Main.csproj" />
     <ProjectReference Include="..\Studio.Support\Studio.Support.csproj" />
   </ItemGroup>

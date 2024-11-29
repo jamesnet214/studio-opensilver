@@ -1,6 +1,7 @@
-﻿<ResourceDictionary
+﻿<ResourceDictionary        
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:based="clr-namespace:Jamesnet.OpenSilver;assembly=Jamesnet.OpenSilver"
     xmlns:views="clr-namespace:Studio.Main.UI.Views"
     xmlns:units="clr-namespace:Studio.Support.UI.Units;assembly=Studio.Support">
 
@@ -8,24 +9,22 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="views:MainContent">
-                    <StackPanel>
-                        <TextBlock Text="James"/>
-
-                        <units:RiotSwitchButton/>
-
-                        <Border BorderThickness="5" BorderBrush="BLUE" CornerRadius="10">
-                            <ListBox>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                                <ListBoxItem>ASDF</ListBoxItem>
-                            </ListBox>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="#323847" Padding="10">
+                            <StackPanel Orientation="Horizontal">
+                                <units:LogoButton Content="JAMESNET"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="ARTICLE" Content="ARTICLE"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="STORE" Content="STORE"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="PURCHASED" Content="PURCHASED"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="CREATE" Content="CREATE"/>
+                            </StackPanel>
                         </Border>
-                    </StackPanel>
+                        <based:OpenSilverLayer Grid.Row="1" LayerName="CONTENT"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

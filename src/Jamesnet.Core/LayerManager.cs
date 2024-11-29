@@ -85,26 +85,20 @@ public class LayerManager : ILayerManager
         var loadedEvent = type.GetEvent("Loaded");
         if (loadedEvent != null)
         {
-            // 델리게이트 변수를 먼저 선언
             Delegate handler = null;
 
-            // 델리게이트 액션 정의 (handler 참조 가능)
             Action<object, object> handlerAction = (s, e) =>
             {
                 RegisterToLayerManager(layer);
-                // 이벤트 핸들러 제거
                 loadedEvent.RemoveEventHandler(layer, handler);
             };
 
-            // 델리게이트 생성
             handler = Delegate.CreateDelegate(loadedEvent.EventHandlerType, handlerAction.Target, handlerAction.Method);
 
-            // 이벤트 핸들러 추가
             loadedEvent.AddEventHandler(layer, handler);
         }
         else
         {
-            // Loaded 이벤트가 없을 경우 바로 등록
             RegisterToLayerManager(layer);
         }
     }
