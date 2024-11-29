@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
+    <ProjectReference Include="..\Studio.Support\Studio.Support.csproj" />
   </ItemGroup>
 
   <ItemGroup>

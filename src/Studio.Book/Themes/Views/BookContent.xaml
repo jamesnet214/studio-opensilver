@@ -7,9 +7,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="views:BookContent">
-                    <Grid>
+                    <StackPanel>
                         <TextBlock Text="Book" FontSize="50"/>
-                    </Grid>
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
