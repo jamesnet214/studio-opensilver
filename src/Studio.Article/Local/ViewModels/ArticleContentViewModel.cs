@@ -4,6 +4,7 @@ using Studio.Support.Local.Managers;
 using Studio.Support.Local.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
@@ -67,7 +68,20 @@ namespace Studio.Main.Local.ViewModels
         private async void ArticleManager_OnMenuSelected(MenuResponse menu)
         {
             IsLoading = true;
-            Articles = await _articleProxy.GetArticles(menu.MenuID.ToString(), "recent");
+
+            var articles = await _articleProxy.GetArticles(menu.MenuID.ToString(), "recent");
+
+            foreach (var article in articles)
+            {
+                var enContent = article.Contents.FirstOrDefault(c => c.LanguageCode == "EN");
+                if (enContent != null)
+                {
+                    article.Contents.Remove(enContent);
+                    article.Contents.Insert(0, enContent);
+                }
+            }
+
+            Articles = articles;
             IsLoading = false;
         }
     }
