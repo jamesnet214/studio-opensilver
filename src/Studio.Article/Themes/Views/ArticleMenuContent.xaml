@@ -1,0 +1,24 @@
+﻿<ResourceDictionary        
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Studio.Support.UI.Units;assembly=Studio.Support"
+    xmlns:views="clr-namespace:Studio.Main.UI.Views">
+
+    <Style TargetType="views:ArticleMenuContent">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:ArticleMenuContent">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <units:ArticleMenuListBox Grid.Row="0"
+                                                  ItemsSource="{Binding Menus}"
+                                                  SelectedItem="{Binding CurrentMenu, Mode=TwoWay}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -117,7 +117,7 @@ public class Container : IContainer
                 {
                     if (viewModelInitialized && view.DataContext is IViewLoadable loadable)
                     {
-                        loadable.Loaded();
+                        loadable.Loaded(view);
                     }
                     // 이벤트 제거를 위한 델리게이트 생성
                     var delegateType = loadedEvent.EventHandlerType;

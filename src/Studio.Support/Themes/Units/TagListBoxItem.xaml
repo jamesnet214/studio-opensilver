@@ -1,0 +1,21 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Studio.Support.UI.Units">
+
+    <Style TargetType="units:TagListBoxItem">
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:TagListBoxItem">
+                    <Grid Margin="0 0 10 0">
+                        <TextBlock Text="{Binding Path=., StringFormat={}#{0}}" 
+                                   FontFamily="Noto Sans KR, Noto Sans SC, sans-serif"
+                                   FontSize="12" 
+                                   Foreground="#555555"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

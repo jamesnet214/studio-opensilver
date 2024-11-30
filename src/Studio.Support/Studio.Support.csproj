@@ -11,13 +11,46 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Local\Converters\TitleCaseConverter.cs" />
+    <Compile Include="Local\Managers\ArticleManager.cs" />
+    <Compile Include="Local\Models\ProxyModels.cs" />
+    <Compile Include="UI\Units\ArticleListBox.cs" />
+    <Compile Include="UI\Units\ArticleListBoxItem.cs" />
+    <Compile Include="UI\Units\ArticleMenuListBox.cs" />
+    <Compile Include="UI\Units\ArticleMenuListBoxItem.cs" />
     <Compile Include="UI\Units\LogoButton.cs" />
     <Compile Include="UI\Units\MenuButton.cs" />
     <Compile Include="UI\Units\RiotSwitchButton.cs" />
+    <Compile Include="UI\Units\TagListBox.cs" />
+    <Compile Include="UI\Units\TagListBoxItem.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\ArticleMenuListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\ArticleMenuListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\TagListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\TagListBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\ArticleListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\ArticleListBox.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\Units\LogoButton.xaml">
@@ -43,6 +76,30 @@
 
   <ItemGroup>
     <Resource Include="Local\Images\favicon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Units\ArticleListBox.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Units\ArticleListBoxItem.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Units\TagListBox.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Units\TagListBoxItem.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Units\ArticleMenuListBox.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Units\ArticleMenuListBoxItem.xaml" />
   </ItemGroup>
 
 </Project>

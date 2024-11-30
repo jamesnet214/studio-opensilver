@@ -4,6 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <EnableDefaultItems>false</EnableDefaultItems>
     <DefineSilverlight>true</DefineSilverlight>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,12 +16,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="Local\ViewModels\ArticleMenuContentViewModel.cs" />
     <Compile Include="Local\ViewModels\ArticleContentViewModel.cs" />
     <Compile Include="UI\Views\ArticleContent.cs" />
+    <Compile Include="UI\Views\ArticleMenuContent.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\ArticleMenuContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -31,12 +38,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\James.Proxy\James.Proxy.csproj" />
     <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
     <ProjectReference Include="..\Studio.Support\Studio.Support.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Themes\Views\ArticleContent.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Themes\Views\ArticleMenuContent.xaml" />
   </ItemGroup>
 
 </Project>

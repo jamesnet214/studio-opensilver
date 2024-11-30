@@ -5,5 +5,7 @@
       xmlns:based="clr-namespace:Jamesnet.OpenSilver;assembly=Jamesnet.OpenSilver"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
+    <Grid Background="#FAFAFA">
         <based:OpenSilverLayer LayerName="MAIN"/>
+    </Grid>
 </Page>

@@ -1,0 +1,54 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Studio.Support.UI.Units">
+
+    <Style TargetType="units:ArticleListBoxItem">
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:ArticleListBoxItem">
+                    <Grid Margin="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border UseLayoutRounding="True"
+                                BorderThickness="1"
+                                BorderBrush="#666666"
+                                Margin="0 0 20 0"
+                                Width="120"
+                                Height="85"
+                                CornerRadius="6">
+                            <Border.Background>
+                                <ImageBrush ImageSource="{Binding ArticleThumbnails[0]}" Stretch="UniformToFill"/>
+                            </Border.Background>
+                            <Border.Effect>
+                                <DropShadowEffect 
+                                    BlurRadius="10" 
+                                    ShadowDepth="5" 
+                                    Direction="315" 
+                                    Opacity="0.3" 
+                                    Color="Black"/>
+                            </Border.Effect>
+                        </Border>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" 
+                                       FontSize="14" 
+                                       FontWeight="Bold" 
+                                       FontFamily="Noto Sans KR, Noto Sans SC, sans-serif"
+                                       Text="{Binding Contents[0].Title}"/>
+                            <units:TagListBox Grid.Row="1"
+                                              Margin="0 10 0 0"
+                                              ItemsSource="{Binding Tags}"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

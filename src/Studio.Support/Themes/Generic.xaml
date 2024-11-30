@@ -5,5 +5,11 @@
         <ResourceDictionary Source="/Studio.Support;component/Themes/Units/LogoButton.xaml"/>
         <ResourceDictionary Source="/Studio.Support;component/Themes/Units/MenuButton.xaml"/>
         <ResourceDictionary Source="/Studio.Support;component/Themes/Units/RiotSwitchButton.xaml"/>
+        <ResourceDictionary Source="/Studio.Support;component/Themes/Units/ArticleListBoxItem.xaml"/>
+        <ResourceDictionary Source="/Studio.Support;component/Themes/Units/ArticleListBox.xaml"/>
+        <ResourceDictionary Source="/Studio.Support;component/Themes/Units/ArticleMenuListBoxItem.xaml"/>
+        <ResourceDictionary Source="/Studio.Support;component/Themes/Units/ArticleMenuListBox.xaml"/>
+        <ResourceDictionary Source="/Studio.Support;component/Themes/Units/TagListBoxItem.xaml"/>
+        <ResourceDictionary Source="/Studio.Support;component/Themes/Units/TagListBox.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

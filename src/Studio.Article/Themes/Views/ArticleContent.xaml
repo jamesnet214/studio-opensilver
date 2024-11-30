@@ -8,10 +8,36 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="views:ArticleContent">
-                    <StackPanel HorizontalAlignment="Left">
-                        <TextBlock Text="ARTICLE" FontSize="50"/>
-                        <units:RiotSwitchButton/>
-                    </StackPanel>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition MaxWidth="1200" MinWidth="400"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <TextBlock Grid.Column="1" 
+                                   FontFamily="Noto Sans KR, Noto Sans SC, sans-serif"
+                                   Text="ARTICLE" 
+                                   FontSize="30" 
+                                   Margin="20"/>
+                        <units:ArticleListBox Grid.Row="1" 
+                                              Grid.Column="1" 
+                                              ItemsSource="{Binding Articles}"/>
+                        <TextBox Grid.Row="2" 
+                                 Grid.Column="1" 
+                                 Text="{Binding Message}" 
+                                 Visibility="Collapsed"/>
+                        <CheckBox Grid.Row="3"
+                                  Grid.Column="1" 
+                                  IsChecked="{Binding IsLoading}" 
+                                  Visibility="Collapsed"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

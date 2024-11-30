@@ -18,12 +18,19 @@
                             <StackPanel Orientation="Horizontal">
                                 <units:LogoButton Content="JAMESNET"/>
                                 <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="ARTICLE" Content="ARTICLE"/>
-                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="STORE" Content="STORE"/>
-                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="PURCHASED" Content="PURCHASED"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="BOOK" Content="BOOK"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="TUTORIAL" Content="TUTORIAL"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="GITHUB" Content="GITHUB"/>
+                                <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="SHOWCASE" Content="SHOWCASE"/>
                                 <units:MenuButton Margin="5" Foreground="#FFFFFF" FontSize="12" Command="{Binding MenuCommand}" CommandParameter="CREATE" Content="CREATE"/>
                             </StackPanel>
                         </Border>
-                        <based:OpenSilverLayer Grid.Row="1" LayerName="CONTENT"/>
+                        <ScrollViewer Grid.Row="1" Background="Transparent">
+                            <based:OpenSilverLayer Grid.Row="1" LayerName="CONTENT"/>
+                        </ScrollViewer>
+                        <based:OpenSilverLayer Grid.Row="1" 
+                                               LayerName="LEFT_SIDE"
+                                               HorizontalAlignment="Left"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

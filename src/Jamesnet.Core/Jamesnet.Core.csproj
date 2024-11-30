@@ -7,6 +7,11 @@
       <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+
+  <ItemGroup>
+    <PackageReference Include="OpenSilver" Version="3.0.1" />
+  </ItemGroup>
+  
   <ItemGroup>
     <Compile Remove="InjectAttribute.cs" />
   </ItemGroup>

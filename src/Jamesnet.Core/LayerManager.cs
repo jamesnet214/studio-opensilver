@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace Jamesnet.Core;
 
@@ -42,7 +43,17 @@ public class LayerManager : ILayerManager
             Add(layerName, view);
         }
 
-        layer.Content = view;
+        if (layer.Content is IView iview && iview.DataContext is IViewClosed viewClosed)
+        {
+            viewClosed.ViewClosed(view);
+        }
+
+        layer.Content = view as UIElement;
+
+        if (view.DataContext is IViewActivated activated)
+        { 
+            activated.ViewActivated(view);
+        }
     }
 
     public void Add(string layerName, IView view)

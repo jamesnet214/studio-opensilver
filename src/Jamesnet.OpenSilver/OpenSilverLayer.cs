@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace Jamesnet.OpenSilver
 {
-    public class OpenSilverLayer : ContentControl, ILayer
+    public class OpenSilverLayer : UserControl, ILayer
     {
         public static readonly DependencyProperty LayerNameProperty =
             DependencyProperty.Register(nameof(LayerName), typeof(string), typeof(OpenSilverLayer), new PropertyMetadata(null, OnLayerNameChanged));
